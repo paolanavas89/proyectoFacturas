@@ -60,9 +60,7 @@ $(document).ready(function(){
                     //convierto en objeto el formato JSON para poder acceder a los atributos
                     var info= JSON.parse(response);
                    // $('#producto_id').val(info.codproducto);
-                   // $('.nameProducto').html(info.descripcion);
-                   
-
+                   // $('.nameProducto').html(info.descripcion);                   
                     $('.bodyModal').html(
                         '<form action="" method="post" name="form_add_product" id="form_add_product" onsubmit="event.preventDefault(); sendDataProduct();">'+
                             '<h1><i class="fas fa-cubes" style="font-size: 45pt;"></i><br>Agregar Producto</h1>'+
