@@ -56,7 +56,7 @@
 	<?php include "includes/header.php"; ?>
 	<section id="container">
 		<div class="form_register">
-			<h1>Registro Cliente</h1>
+			<h1><i class="fas fa-user-plus"></i>Registro Cliente</h1>
 			<hr>
 			<div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
 
@@ -69,8 +69,8 @@
 				<input type="number" name="telefono" id="telefono" placeholder="Teléfono">
 				<label for="direccion">Dirección</label>
 				<input type="text" name="direccion" id="direccion" placeholder="Dirección completa">
+				<button type="submit" class="btn_save"><i class="fas fa-save fa-lg"></i>  Guardar cliente</button>
 				
-				<input type="submit" value="Guardar cliente" class="btn_save">
 			</form>
 		</div>
 	</section>

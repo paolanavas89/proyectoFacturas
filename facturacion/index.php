@@ -11,9 +11,9 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<section id="container">
-		<h1>Bienvenido al sistema</h1>	
-		<div class="container_index">
+		<div >
 
+			<img class="port" src="img/portada.png" alt="Usuario">
 			
 		</div>
 	</section>

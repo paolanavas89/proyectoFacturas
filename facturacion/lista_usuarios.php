@@ -26,7 +26,7 @@
 		
 		<form action="buscar_usuario.php" method="get" class="form_search">
 			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
-			<input type="submit" value="Buscar" class="btn_search">
+			<button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
 		</form>
 
 		<table>
@@ -74,11 +74,11 @@
 					<td><?php echo $data["usuario"]; ?></td>
 					<td><?php echo $data['rol'] ?></td>
 					<td>
-						<a class="link_edit" href="editar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Editar</a>
+						<a class="link_edit" href="editar_usuario.php?id=<?php echo $data["idusuario"]; ?>"><i class="far fa-edit"></i> Editar</a>
 
 					<?php if($data["idusuario"] != 1){ ?>
 						|
-						<a class="link_delete" href="eliminar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Eliminar</a>
+						<a class="link_delete" href="eliminar_usuario.php?id=<?php echo $data["idusuario"]; ?>"><i class="far fa-trash-alt"></i> Eliminar</a>
 					<?php } ?>
 						
 					</td>

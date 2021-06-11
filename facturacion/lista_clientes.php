@@ -15,9 +15,9 @@
 		<h1>Lista de clientes</h1>
 		<a href="registro_cliente.php" class="btn_new">Crear cliente</a>
 
-		<form action="buscar_clientes.php" method="get" class="form_search">
+		<form action="buscar_cliente.php" method="get" class="form_search">
 			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
-			<input type="submit" value="Buscar" class="btn_search">
+			<button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
 		</form>
 
 		<table>
@@ -72,9 +72,9 @@
 							<td>
 							
 
-								<a class="link_edit" href="editar_cliente.php?id=<?php echo $data['idcliente']; ?>">Editar</a>
+								<a class="link_edit" href="editar_cliente.php?id=<?php echo $data['idcliente']; ?>"><i class="far fa-edit"></i> Editar</a>
 								|
-								<a class="link_delete" href="eliminar_cliente.php?id=<?php echo $data['idcliente']; ?>">Eliminar</a>
+								<a class="link_delete" href="eliminar_cliente.php?id=<?php echo $data['idcliente']; ?>"><i class="far fa-trash-alt"></i> Eliminar</a>
 							</td>
 						</tr>
 			<?php

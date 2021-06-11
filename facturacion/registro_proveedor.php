@@ -52,7 +52,7 @@
 	<?php include "includes/header.php"; ?>
 	<section id="container">
 		<div class="form_register">
-			<h1>Registro Proveedor</h1>
+			<h1><i class="far fa-building"></i>Registro Proveedor</h1>
 			<hr>
 			<div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
 
@@ -65,8 +65,8 @@
 				<input type="number" name="telefono" id="telefono" placeholder="Teléfono">
 				<label for="direccion">Dirección</label>
 				<input type="text" name="direccion" id="direccion" placeholder="Dirección completa">
+				<button type="submit" class="btn_save"><i class="fas fa-save fa-lg"></i>  Guardar proveedor</button>
 				
-				<input type="submit" value="Guardar proveedor" class="btn_save">
 			</form>
 		</div>
 	</section>

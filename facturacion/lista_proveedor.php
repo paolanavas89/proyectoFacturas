@@ -16,12 +16,12 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<section id="container">
-		<h1>Lista de proveedores</h1>
+		<h1><i class="far fa-building"></i>Lista de proveedores</h1>
 		<a href="registro_proveedor.php" class="btn_new">Crear proveedor</a>
 
 		<form action="buscar_proveedor.php" method="get" class="form_search">
 			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
-			<input type="submit" value="Buscar" class="btn_search">
+			<button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
 		</form>
 
 		<table>
@@ -77,9 +77,9 @@
 							<td>
 							
 
-								<a class="link_edit" href="editar_proveedor.php?id=<?php echo $data['codproveedor']; ?>">Editar</a>
+								<a class="link_edit" href="editar_proveedor.php?id=<?php echo $data['codproveedor']; ?>"><i class="far fa-edit"></i> Editar</a>
 								|
-								<a class="link_delete" href="eliminar_proveedor.php?id=<?php echo $data['codproveedor']; ?>">Eliminar</a>
+								<a class="link_delete" href="eliminar_proveedor.php?id=<?php echo $data['codproveedor']; ?>"><i class="far fa-trash-alt"></i> Eliminar</a>
 							</td>
 						</tr>
 			<?php

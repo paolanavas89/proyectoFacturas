@@ -13,11 +13,11 @@
 	<?php include "includes/header.php"; ?>
 	<section id="container">
 		<h1>Lista de productos</h1>
-		<a href="registro_proveedor.php" class="btn_new">Registrar producto</a>
+		<a href="registro_producto.php" class="btn_new">Registrar producto</a>
 
 		<form action="buscar_productos.php" method="get" class="form_search">
 			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
-			<input type="submit" value="Buscar" class="btn_search">
+			<button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
 		</form>
 		<table>
 			<tr>
@@ -36,7 +36,7 @@
 				$result_register = mysqli_fetch_array($sql_registe);
 				$total_registro = $result_register['total_registro'];
 
-				$por_pagina = 10;
+				$por_pagina = 8;
 
 				if(empty($_GET['pagina'])){
 					$pagina = 1;
@@ -71,11 +71,11 @@
 							
 							<?php if($_SESSION['rol']==1 || $_SESSION['rol']==2){ ?>
 							<td>	
-								<a class="link_add add_producto" product="<?php echo $data['codproducto']; ?>" href="#">Agregar</a>
+								<a class="link_add add_producto" product="<?php echo $data['codproducto']; ?>" href="#"><i class="fas fa-plus"></i> Agregar</a>
 								|
-								<a class="link_edit" href="editar_producto.php?id=<?php echo $data['codproducto']; ?>">Editar</a>
+								<a class="link_edit" href="editar_producto.php?id=<?php echo $data['codproducto']; ?>"><i class="far fa-edit"></i> Editar</a>
 								|
-								<a class="link_delete" href="eliminar_producto.php?id=<?php echo $data['codproducto']; ?>">Eliminar</a>
+								<a class="link_delete del_product" href="#" product="<?php echo $data['codproducto']; ?>"><i class="far fa-trash-alt"></i> Eliminar</a>
 							</td>	
 							<?php } ?>
 							

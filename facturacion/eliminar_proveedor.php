@@ -15,13 +15,13 @@
 
 		$idproveedor = $_POST['idproveedor'];
 
-		$query_delete = mysqli_query($conection,"UPDATE proveedor SET estatus = 0 WHERE codproveedor = $idproveedor");
+		$query_delete = mysqli_query($conection,"UPDATE producto SET estatus = 0 WHERE codproducto = $idproducto");
 		mysqli_close($conection);
 
 		if($query_delete){
 			header("location: lista_proveedor.php");
 		}else{
-			echo "Error al eliminar el cliente";
+			echo "Error al eliminar";
 		}
 	}
 
@@ -65,7 +65,7 @@
 			<form method="post" action="">
 				<input type="hidden" name="idproveedor" value="<?php echo $idproveedor; ?>">
 				<a href= "lista_proveedor.php" class="btn_cancel">Cancelar</a>
-				<input type="submit" value="Eliminar" class="btn_ok">
+				<button type="submit"class="btn_ok"> Eliminar </button>
 			</form>
 	</section>
 </body>

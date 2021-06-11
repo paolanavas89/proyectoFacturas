@@ -70,7 +70,7 @@
 	<?php include "includes/header.php"; ?>
 	<section id="container">
 		<div class="form_register">
-			<h1>Registro podructo</h1>
+			<h1><i class="fas fa-cubes"></i> Registro podructo</h1>
 			<hr>
 			<div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
 
@@ -122,7 +122,7 @@
 			
 				
 
-				<button type="submit" class="btn_save">Guardar producto</button> 
+				<button type="submit" class="btn_save"><i class="fas fa-save fa-lg"></i>  Guardar producto</button> 
 			</form>
 		</div>
 	</section>

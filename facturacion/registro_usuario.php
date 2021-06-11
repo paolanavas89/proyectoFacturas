@@ -17,9 +17,9 @@
 			$nombre = $_POST['nombre'];
 			$email  = $_POST['correo'];
 			$user   = $_POST['usuario'];
-			$clave  = md5($_POST['clave']);
+			$clave  = $_POST['clave'];
 			$rol    = $_POST['rol'];
-
+			$estatus = 1;
 
 			$query = mysqli_query($conection,"SELECT * FROM usuario WHERE usuario = '$user' OR correo = '$email' ");
 			$result = mysqli_fetch_array($query);
@@ -28,8 +28,8 @@
 				$alert='<p class="msg_error">El correo o el usuario ya existe.</p>';
 			}else{
 
-				$query_insert = mysqli_query($conection,"INSERT INTO usuario(nombre,correo,usuario,clave,rol)
-																	VALUES('$nombre','$email','$user','$clave','$rol')");
+				$query_insert = mysqli_query($conection,"INSERT INTO usuario(nombre,correo,usuario,clave,rol,estatus)
+																	VALUES('$nombre','$email','$user','$clave','$rol',$estatus)");
 				if($query_insert){
 					$alert='<p class="msg_save">Usuario creado correctamente.</p>';
 				}else{
@@ -59,7 +59,7 @@
 	<section id="container">
 		
 		<div class="form_register">
-			<h1>Registro usuario</h1>
+			<h1><i class="fas fa-users"></i>		Registro usuario</h1>
 			<hr>
 			<div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
 
@@ -96,7 +96,8 @@
 						}
 					 ?>
 				</select>
-				<input type="submit" value="Crear usuario" class="btn_save">
+				
+				<button type="submit" class="btn_save" ><i class="far fa-save"></i>  Crear usuario</button>
 
 			</form>
 

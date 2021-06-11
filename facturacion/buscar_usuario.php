@@ -37,7 +37,7 @@
 		
 		<form action="buscar_usuario.php" method="get" class="form_search">
 			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar" value="<?php echo $busqueda; ?>">
-			<input type="submit" value="Buscar" class="btn_search">
+			<button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
 		</form>
 
 		<table>
@@ -117,7 +117,7 @@
 
 					<?php if($data["idusuario"] != 1){ ?>
 						|
-						<a class="link_delete" href="eliminar_confirmar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Eliminar</a>
+						<a class="link_delete" href="eliminar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Eliminar</a>
 					<?php } ?>
 						
 					</td>
