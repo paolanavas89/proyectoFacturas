@@ -13,7 +13,7 @@
 	<section id="container">
 		<div >
 
-			<img class="port" src="img/portada.png" alt="Usuario">
+			<img class="port" src="img/portada.gif" alt="Usuario">
 			
 		</div>
 	</section>

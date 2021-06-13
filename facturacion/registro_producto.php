@@ -104,7 +104,7 @@
 				<label for="producto">Producto</label>
 				<input type="text" name="producto" id="producto" placeholder="Nombre del Producto">
 				<label for="precio">Precio</label>
-				<input type="number" name="precio" id="precio" placeholder="Precio del producto">
+				<input type="number" step="any" name="precio" id="precio" placeholder="Precio del producto">
 				<label for="cantidad">Cantidad</label>
 				<input type="number" name="cantidad" id="cantidad" placeholder="cantidad del producto">
 				

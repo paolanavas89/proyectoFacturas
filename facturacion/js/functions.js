@@ -75,7 +75,7 @@ $(document).ready(function(){
                             '<input type="text" name="precio" id="txtPrecio" placeholder="Precio del producto" required>'+
                             '<input type="hidden" name="producto_id" id="producto_id" value="'+info.codproducto+'" required>'+
                             '<input type="hidden" name="action" value="addProduct" required>'+
-                            '<div class="alert alertAddProduct"><p>Alerta de acción</p></div>'+
+                            '<div class="alert alertAddProduct"></div>'+
                             '<button type="submit" class="btn_new"><i class="fas fa-plus"></i>Agregar</button>'+
                             '<a href="#" class="btn_ok closeModal" onclick="closeModal();"><i class="fas fa-ban"></i>Cerrar</a>'+   
                         '</form>');
